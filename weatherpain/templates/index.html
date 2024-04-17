@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pain Tracker</title>
+</head>
+<body>
+    <h1>Pain Tracker</h1>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.pain_score.label }}<br>
+            {{ form.pain_score(size=2) }}
+        </p>
+        <p>
+            {{ form.latitude.label }}<br>
+            {{ form.latitude(size=10) }}
+        </p>
+        <p>
+            {{ form.longitude.label }}<br>
+            {{ form.longitude(size=10) }}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+    <div>{{ plots|safe }}</div>
+</body>
+</html>
